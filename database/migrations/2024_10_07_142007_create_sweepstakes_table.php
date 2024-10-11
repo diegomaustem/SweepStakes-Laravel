@@ -12,8 +12,8 @@ return new class extends Migration
             $table->uuid("id")->primary();
             $table->foreignId('user_id');
             $table->integer("number_of_winners")->default(1);
-            $table->dateTime("end_data")->nullable();
-            $table->dateTime("description")->nullable();
+            $table->dateTime("end_date")->nullable();
+            $table->text("description")->nullable();
             $table->timestamps();
         });
     }
